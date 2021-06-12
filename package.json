@@ -1,0 +1,45 @@
+{
+  "name": "streaming-xml-transformer",
+  "version": "0.1.0",
+  "description": "Async XML transformer for large files",
+  "main": "dist/xml-transform.js",
+  "types": "dist/xml-transform.d.ts",
+  "scripts": {
+    "build": "rm -Rf dist && tsc",
+    "lint": "eslint src/**/* test/**/* *.js --fix",
+    "prepack": "npm run build",
+    "test": "npm run build && tap",
+    "test-jenkins": "npm run build && tap --no-coverage --reporter=xunit"
+  },
+  "author": "Peter Sergeant",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.ts": "eslint --fix"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/node": "^15.6.1",
+    "@types/sax": "^1.2.1",
+    "@types/tap": "^15.0.2",
+    "@types/xml2js": "^0.4.8",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "tap": "^15.0.9",
+    "temp": "^0.9.4",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "sax": "^1.2.4",
+    "xml2js": "^0.4.23"
+  }
+}

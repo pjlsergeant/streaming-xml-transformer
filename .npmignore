@@ -1,0 +1,7 @@
+.devcontainer.json
+.gitignore
+.husky
+.nyc_output
+*.tgz
+Dockerfile
+Jenkinsfile
